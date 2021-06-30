@@ -7,6 +7,7 @@
   <link rel="icon" href="images/weather-icon2.png">
   <title>Weather App</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
+  <script src="https://kit.fontawesome.com/ccbf72a207.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
   <script src="./script.js" defer></script>
@@ -14,6 +15,9 @@
 
 <body>
   <div class="card">
+  <div class="wave -one"></div>
+  <div class="wave -two"></div>
+  <div class="wave -three"></div>
     <div class="search">
       <input type="text" class="search-bar" placeholder="Search">
       <button><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1.5em"
@@ -24,8 +28,15 @@
         </svg></button>
     </div>
     <div class="weather loading">
-      <h2 class="city">Weather in Denver</h2>
-      <h1 class="temp">51°C</h1>
+      <div class="flex">
+      <h2 class="weatherin">Weather in</h2>
+      <h3 class="fa fa-map-marker" aria-hidden="true"></h3>
+      <h2 class="city"> Weather in Delhi, IN</h2>
+    </div>
+    <div class="flex">
+      <h1 class="fa fa-thermometer-three-quarters"></h1>
+      <h1 class="temp">31°C</h1>
+      </div>
       <div class="flex">
         <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
         <div class="description">Cloudy</div>

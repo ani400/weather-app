@@ -6,7 +6,7 @@ body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
     background: #222;
-    background-image: url('https://source.unsplash.com/1600x900/?weather');
+    background-image: url('https://source.unsplash.com/1600x900/?cloud'); 
     font-size: 120%;
   }
   
@@ -18,6 +18,8 @@ body {
     width: 100%;
     max-width: 420px;
     margin: 1em;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
   }
   
   .search {
@@ -84,3 +86,64 @@ body {
     top: 0;
     left: 20px;
   }
+
+  .fa-map-marker{
+    animation: rotates 0.75s linear infinite alternate ;
+  }
+
+  @keyframes rotates {
+    from{
+      transform: translateX(-0.5rem);
+    }
+    from{
+      transform: translateX(0.5rem);
+    }
+    
+  }
+  .icon{
+    font-weight: bold;
+  }
+  .weatherin{
+    margin-right: 0.75em;
+  }
+  .city{
+    margin-left: 0.5em;
+  }
+  .fa-thermometer-three-quarters{
+    margin-right: 0.5em;
+  }
+  .wave {
+    opacity: 0.25;
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    background: rgb(143, 212, 240);
+    width: 50rem;
+    height: 50rem;
+    margin-left: -25rem;
+    margin-top: -25rem;
+    transform-origin: 52% 49%;
+    border-radius: 45%;
+    animation: drift 5000ms infinite linear;
+    z-index: 1;
+}
+
+.wave.-three {
+    animation: drift 7000ms infinite linear;
+    z-index: 2 !important;
+    opacity: 0.2;
+}
+
+.wave.-two {
+    animation: drift 9000ms infinite linear;
+    opacity: 0.1;
+    z-index: 3 !important;
+}
+@keyframes drift {
+  from {
+      transform: rotate(0deg);
+  }
+  from {
+      transform: rotate(360deg);
+  }
+}
