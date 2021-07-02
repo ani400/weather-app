@@ -9,7 +9,23 @@ let weather = {
     )
       .then((response) => {
         if (!response.ok) {
-          alert("Sorry! No weather found.");
+          // alert("Sorry! No weather found.");
+    
+            document.getElementsByClassName("popup")[0].classList.add("active");
+        
+           
+         
+          // for fancy alert using swalfire function in sweetalert2 plugins and bootstrap
+          // Swal.fire({
+          //   title: "Oops... No weather found",
+          //   text: "Please Enter a valid city name",
+          //   icon: "error",
+          //   buttonsStyling: false,
+          //   confirmButtonText: "OK",
+          //   customClass: {
+          //     confirmButton: "btn btn-primary",
+          //   },
+          // });
           throw new Error("No weather found.");
         }
         return response.json();
@@ -33,7 +49,7 @@ let weather = {
       "Wind speed: " + speed + " km/h";
     document.querySelector(".weather").classList.remove("loading");
     document.body.style.backgroundImage =
-      "url('https://source.unsplash.com/1600x900/?" + description + "')";
+      "url('https://source.unsplash.com/1600x1200/?" + description + "')";
   },
   search: function () {
     this.fetchWeather(document.querySelector(".search-bar").value);
@@ -53,3 +69,7 @@ document
   });
 
 weather.fetchWeather("Delhi");
+
+document.getElementById("dismiss-popup-btn").addEventListener("click",function(){
+  document.getElementsByClassName("popup")[0].classList.remove("active");
+});

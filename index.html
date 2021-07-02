@@ -14,12 +14,41 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+    <!-- for sweet alert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    <!-- <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'> -->
+<!-- for alert using jquey and bootstrap -->
+    <script src="//code.jquery.com/jquery.min.js"></script>
+<script src="dist/js/bootstrap-msg.min.js"></script>
+ <!-- bootstrap  -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="./style.css" />
     <script src="./script.js" defer></script>
   </head>
 
   <body>
     <div class="card">
+
+      <div class="popup center">
+        <div class="icon">
+          <i class="fa fa-times"></i>
+        </div>
+        <div class="title">
+          Weather Not Found
+        </div>
+        <div class="des">
+          Please Enter a valid City.
+        </div>
+        <div class="dismiss-btn">
+          <button id="dismiss-popup-btn">
+            OK
+          </button>
+        </div>
+      </div>
+
       <div class="wave -one"></div>
       <div class="wave -two"></div>
       <div class="wave -three"></div>
@@ -68,7 +97,7 @@
     </div>
     <div class="watermark">
       &copy | Made with ❤️ by
-      <a href="https://github.com/chhotu05"><b>Chhotu</b></a>
+      <a href="https://github.com/chhotu05"><strong>Chhotu</strong></a>
     </div>
   </body>
 </html>
